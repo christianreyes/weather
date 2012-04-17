@@ -7,9 +7,12 @@ $(function(){
     $('#latitude').text(latitude);
     $('#longitude').text(longitude);
     
-    var uri = "http://forecast.weather.gov/MapClick.php?lat=" + latitude + "&lon=" + longitude + "&FcstType=dwml";
-    jQuery.get(uri, function(res){
-      $('#weather').text(res.responseText);
+    var uri = "http://ws.geonames.org/findNearByWeatherJSON?lat=" + latitude + "&lng=" + longitude
+
+    $.getJSON(uri, function(data){
+      $('#temp').text(data.weatherObservation.temperature * 1.8 + 32 + " F");
+      $('#condition').text(data.weatherObservation.weatherCondition);
+      $('#clouds').text(data.weatherObservation.clouds);
     });
   });
 });
