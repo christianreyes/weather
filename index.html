@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Streem</title>
+    <title>WEATHER BIATCH</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
@@ -10,15 +10,22 @@
     <script src="javascripts/application.js"></script>
   </head>
   <body>
-    <div id="wrapper">
-      <p>
-        Latitude: <em id="latitude"></em>
-      </p>
-      <p>
-        Longitude: <em id="longitude"></em>
-      </p>
-      <p id="weather">
-      </p>
+	<ul id="list">
+		<li>
+       		Temperature: <em id="temp"></em>
+    	</li>
+		<li>
+        	Conditions: <em id="condition"></em>
+      	</li>
+		<li>
+        	Clouds: <em id="condition"></em>
+      	</li>
+		<div class="sun"></div>
+		<div class="clouds">
+			<img id="cloud1" src="images/cloud.png"/>
+			<img id="cloud2" src="images/cloud2.png"/>
+		</div>
+      	<h1 id="city">Pittsburgh</h1>
     </div>
   </body>
 </html>
