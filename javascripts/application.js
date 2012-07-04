@@ -13,6 +13,7 @@ $(function(){
       $('#temp').text(Math.round(data.weatherObservation.temperature * 1.8 + 32 , 2 ) + " F");
       $('#condition').text(data.weatherObservation.weatherCondition);
       $('#clouds').text(data.weatherObservation.clouds);
+      $('#city').text(data.weatherObservation.stationName);
     });
   });
 });
